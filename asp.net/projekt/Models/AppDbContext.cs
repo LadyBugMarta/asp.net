@@ -12,8 +12,8 @@ namespace projekt.Models
         public DbSet<Product> Products { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-        
         }
+         
         
         
 
