@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using projekt.Models;
 using WebApplication9.Models;
 
+
 namespace projekt
 {
     public class Startup
@@ -27,6 +28,7 @@ namespace projekt
         {
             
             services.AddRazorPages();
+            services.AddSignalR();
             services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"]));
         }
@@ -70,7 +72,10 @@ namespace projekt
                     }
                     );
             });
+
+            
             SeedData.EnsurePopulated(app);
-        }
+
+    }
     }
 }
