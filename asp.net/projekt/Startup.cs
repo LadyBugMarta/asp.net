@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using projekt.Models;
 using WebApplication9.Models;
+using SignalRChat.Hubs;
 
 
 namespace projekt
